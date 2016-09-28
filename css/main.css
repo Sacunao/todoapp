@@ -8,6 +8,15 @@
 
 .mensaje{
 	word-wrap: break-word;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.label{
+	margin left: 35px;
+	margin-right: 35px;
+	width: 76%;
 }
 
 /*solo para moviles*/

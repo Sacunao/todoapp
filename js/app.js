@@ -2,15 +2,20 @@ window.addEventListener("load", function(){
 	var boton = document.getElementById("boton");
 	var contenedor = document.getElementById("contenedor");
 	var texto = document.getElementById("textarea");
+	boton.disabled = true;
 
 	boton.addEventListener("click", function(e){
 		e.preventDefault();
 		crearMensaje(texto.value, contenedor);
 		texto.value = "";
+		boton.disabled = true;
 	});
 
 	texto.addEventListener("keyup", function(){
-		validated(this.value);
+		boton.disabled = false;
+		if(texto.value == null || texto.value.length == 0 || /^\s+$/.test(texto.value) ) {
+            boton.disabled = true;
+         } 
 	});
 	
 
@@ -22,6 +27,7 @@ window.addEventListener("load", function(){
 
 		var label = document.createElement("label");
 		label.innerText = texto;
+		// label.setAttribute("class", "label");
 		mensaje.appendChild(label);
 
 		var input = document.createElement("input");
@@ -37,13 +43,5 @@ window.addEventListener("load", function(){
 		remove.addEventListener("click", function(){
 			contenedor.removeChild(mensaje);
 		});
-	}
-
-	function validated(texto){
-		if(texto.length > 0){
-			boton.disabled = false;
-		} else {
-			boton.disabled = true;
-		}
 	}
 });
