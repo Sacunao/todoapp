@@ -1,0 +1,16 @@
+.icono{
+	font-size: 16px;
+	color: red;
+}
+.rayado{
+	text-decoration: line-through;
+}
+
+.mensaje{
+	word-wrap: break-word;
+}
+
+/*solo para moviles*/
+.contenedor{
+	overflow-y: scroll;
+}
