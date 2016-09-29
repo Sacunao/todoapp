@@ -1,5 +1,45 @@
+/*---------General-------*/
+.d-flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.bg-grey{
+	background-color: #E9EAEC;
+}
+
+
+header{
+	width: 100%;   
+    background-color: #4ECDC4;
+    height: auto;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+    font-weight: 600;
+    padding: 0.4em;
+}
+
+
+/*-------Form-Entrada------*/
+.formulario{
+	width: 80%;
+	padding: 1.2em 0px;
+}
+.agregar{
+	margin-left: 0.8em;
+}
+.text-area{
+	width: 100%;
+}
+
+/*---------Mensajes------*/
+.mensajeContent{
+	width: 80%;
+	margin: auto;
+}
 .icono{
-	font-size: 16px;
+	font-size: 1em;
 	color: red;
 }
 .rayado{
@@ -8,18 +48,31 @@
 
 .mensaje{
 	word-wrap: break-word;
+	background-color: #E9EAEC;
+	padding: 0.4em 0.4em;
+	margin: 0.4em 0px;
+	border-radius: 5px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-
-.label{
-	margin left: 35px;
-	margin-right: 35px;
-	width: 76%;
+#mensaje input{
+	margin-right: 1em;
 }
+
+#mensaje label{
+	width: 100%;
+}
+
+#mensaje i{
+	margin-left: 1em;
+}
+
 
 /*solo para moviles*/
-.contenedor{
-	overflow-y: scroll;
+@media (max-width: 480px) {
+  	.contenedor{
+		overflow-y: scroll;
+	}
 }
+

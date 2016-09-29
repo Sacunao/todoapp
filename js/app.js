@@ -13,11 +13,9 @@ window.addEventListener("load", function(){
 
 	texto.addEventListener("keyup", function(){
 		boton.disabled = false;
-		if(texto.value == null || texto.value.length == 0 || /^\s+$/.test(texto.value) ) {
-            boton.disabled = true;
-         } 
+		countEnter(texto);
+		
 	});
-	
 
 	function crearMensaje(texto, contenedor){
 		var mensaje = document.createElement("div");
@@ -27,7 +25,6 @@ window.addEventListener("load", function(){
 
 		var label = document.createElement("label");
 		label.innerText = texto;
-		// label.setAttribute("class", "label");
 		mensaje.appendChild(label);
 
 		var input = document.createElement("input");
@@ -44,4 +41,18 @@ window.addEventListener("load", function(){
 			contenedor.removeChild(mensaje);
 		});
 	}
+
+	function countEnter(text){
+		var textValue = text.value;
+        var textSinEspacios = textValue.trim().length;
+        var espacios = textValue.match(/\n/g);
+        var cantEnters = espacios.length;
+        
+        if(textSinEspacios === 0){
+            boton.disabled = true; 
+        }
+        if(cantEnters > 3){
+            text.setAttribute("rows", cantEnters);
+        }
+    }
 });
