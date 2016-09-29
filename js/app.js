@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
 
 	boton.addEventListener("click", function(e){
 		e.preventDefault();
-		crearMensaje(texto.value, contenedor);
+		crearMensaje(texto.value.trim(), contenedor);
 		texto.value = "";
 		boton.disabled = true;
 	});

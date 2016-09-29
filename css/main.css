@@ -11,7 +11,7 @@
 
 header{
 	width: 100%;   
-    background-color: #4ECDC4;
+    background-color: #4ABDAC;
     height: auto;
     text-align: center;
     color: white;
@@ -37,6 +37,7 @@ header{
 .mensajeContent{
 	width: 80%;
 	margin: auto;
+	text-align: justify;
 }
 .icono{
 	font-size: 1em;
@@ -54,20 +55,29 @@ header{
 	border-radius: 5px;
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: space-around;
 }
+
 #mensaje input{
 	margin-right: 1em;
 }
 
 #mensaje label{
-	width: 100%;
+	width: 80%;
 }
 
 #mensaje i{
 	margin-left: 1em;
 }
 
+#boton{
+	background-color: #FE491A;
+	border: none;
+}
+
+#boton:disabled {
+   background-color: #F7B733;
+}
 
 /*solo para moviles*/
 @media (max-width: 480px) {
