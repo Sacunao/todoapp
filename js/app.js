@@ -46,7 +46,7 @@ window.addEventListener("load", function(){
 		var textValue = text.value;
         var textSinEspacios = textValue.trim().length;
         var espacios = textValue.match(/\n/g);
-        var cantEnters = espacios.length;
+        var cantEnters = (espacios.length == null) ? 0 : espacios.length;
         
         if(textSinEspacios === 0){
             boton.disabled = true; 
