@@ -1,21 +1,28 @@
-window.addEventListener("load", function(){
+;(function(){
+
 	var boton = document.getElementById("boton");
 	var contenedor = document.getElementById("contenedor");
 	var texto = document.getElementById("textarea");
-	boton.disabled = true;
 
-	boton.addEventListener("click", function(e){
-		e.preventDefault();
-		crearMensaje(texto.value.trim(), contenedor);
-		texto.value = "";
+	window.addEventListener("load", cargarPagina);
+
+	function cargarPagina(){
 		boton.disabled = true;
-	});
+		boton.addEventListener("click", imprimirTexto);
+		texto.addEventListener("keyup", validarTexto);
+	}
 
-	texto.addEventListener("keyup", function(){
-		boton.disabled = false;
-		countEnter(texto);
-		
-	});
+	function imprimirTexto(e){
+			e.preventDefault();
+			crearMensaje(texto.value.trim(), contenedor);
+			texto.value = "";
+			boton.disabled = true;
+	}
+
+	function validarTexto(){
+			boton.disabled = false;
+			countEnter(texto);
+	}
 
 	function crearMensaje(texto, contenedor){
 		var mensaje = document.createElement("div");
@@ -55,4 +62,6 @@ window.addEventListener("load", function(){
             text.setAttribute("rows", cantEnters);
         }
     }
-});
+
+})();
+
