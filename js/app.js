@@ -13,15 +13,15 @@
 	}
 
 	function imprimirTexto(e){
-			e.preventDefault();
-			crearMensaje(texto.value.trim(), contenedor);
-			texto.value = "";
-			boton.disabled = true;
+		e.preventDefault();
+		crearMensaje(texto.value.trim(), contenedor);
+		texto.value = "";
+		boton.disabled = true;
 	}
 
 	function validarTexto(){
-			boton.disabled = false;
-			countEnter(texto);
+		boton.disabled = false;
+		countEnter(texto);
 	}
 
 	function crearMensaje(texto, contenedor){
