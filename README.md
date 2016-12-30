@@ -2,7 +2,7 @@
 
 To do App es una un app que te permite listar tareas, cumple con ciertos requerimientos:
 
-1. El boton solo se activará cuando se escriba dentro un texto, no cuenta los espacios en blanco como texto:
+* El boton solo se activará cuando se escriba dentro un texto, no cuenta los espacios en blanco como texto:
 
 boton desactivado
 
@@ -12,7 +12,7 @@ boton activado
 
 ![Imagen](http://4.1m.yt/y49pD8o.png "Imagen")
 
-2. Cuando se de clic en el boton se debe crear el texto en la parte inferior, debe tener dos opciones una de tachado y otra que debe permitir eliminar la cajita de texto.
+* Cuando se de clic en el boton se debe crear el texto en la parte inferior, debe tener dos opciones una de tachado y otra que debe permitir eliminar la cajita de texto.
 
 Creando un elemento
 
